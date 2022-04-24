@@ -9,9 +9,11 @@ import Typography from '@mui/material/Typography';
 
 //Components
 import Footer from './Footer';
+import { useGlobalContext } from './Context';
 
 function SearchImage() {
-
+  const { loading } = useGlobalContext();;
+  console.log(loading);
   return (
     <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
       <Box
